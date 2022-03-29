@@ -1,4 +1,2 @@
-
-        [console_scripts]
-        template=template:template
-    
+[console_scripts]
+template = template:template
