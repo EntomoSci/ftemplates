@@ -3,6 +3,7 @@ This terminal application creates text files bases on templates.'''
 
 
 import os
+import subprocess  # module used to execute terminal commands and catch its outputs.
 from datetime import datetime
 
 import click
@@ -21,7 +22,7 @@ def template():
         click.echo('Creating required directory "TextFileTemplates" in home directory...')
         os.mkdir(path)
 
-    click.echo('\n')
+    click.echo('')
 
 
 @template.command()
@@ -88,6 +89,23 @@ def create(new_template, new_file, override, file_to_use, file_to_create):
                 f.write(template)
         
     click.echo('\nAll executed.')
+    return None
+
+
+@template.command()
+def list():
+    '''Lists the existing templates.'''
+
+    click.echo('TEMPLATES:')
+    popet_object = subprocess.Popen(['ls', path], stdout=subprocess.PIPE)  # The output as a Popet object. 
+    output_tuple = popet_object.communicate()  # This returns a tuple with the output of the command itself and the errors.
+    templates = str(output_tuple[0]).split('\'')
+    templates = templates[1].split(r'\n')
+
+    for template in templates:
+        if template:
+            click.echo(f'- {template}')
+
     return None
 
 
