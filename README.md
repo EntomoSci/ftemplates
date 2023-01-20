@@ -55,7 +55,16 @@ $ template create --new-template --override updated_markdown_template.md depreca
 <summary>What was your personal motivation to create this project?</summary>
 
 I create this project to create jupyter notebook files (`.ipynb`) with a custom structure to frame data science
-workflows better. The structure of the file was already developed by me (you can find it as the `ds-ipynb` built-in
-template), but copying and pasting the file manually over and over was suboptimal.
-*"I want to create notebooks with predefined structure with a simple command"* gave birth this project.
+workflows better. The structure of the file was already developed by me (you can find it as the
+`data_science_notebook.ipynb` built-in template), but copying and pasting the file manually over and over was
+suboptimal. *"I want to create notebooks with predefined structure with a simple command"* gave birth this project.
+</details>
+
+<details>
+<summary>Why the names of the commands and built-in templates are too long and explicit?</summary>
+
+The project try to be as clear as possible enforcing legibility and intuitive usage. Reading it will be beneficial
+for understanding. Typing it will be a curse, so make your own 2-4 character aliases, write them once and understand
+them whenever you read them with a single look. Therefore both things will be meeting their purposes: self-documented
+commands giving legibility and aliases giving practicality.
 </details>
