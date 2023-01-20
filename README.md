@@ -10,9 +10,9 @@ and use them to create new files easily with a few commands.
 
 ## Rationale
 
-Many times the files we use follows some kind of pattern or predefined structure. Sometimes we end up writting that
+Many times the files we use follows some kind of pattern or predefined structure. Sometimes we end up writing that
 structure ourselves to frame better some workflow. Those structures driven by conventions or personal preferences
-commonly stay the same or change slowly. Writting them over and over again is tedious and inconsistent. Instead of
+commonly stay the same or change slowly. Writing them over and over again is tedious and inconsistent. Instead of
 relying in our busy memory to rebuild the structure of some `.ipynb` or `README` files who been handy in the past,
 automate the process with templates and a CLI.
 
@@ -40,13 +40,13 @@ to use.
 $ template list  
 
 // Create new file using a template.
-$ template create --new-file python_template.py myfile.py
+$ template create --new-file python_template.py new_file.py
 
 // Create new template using a file.
-$ template create --new-template my_notebook_template.ipynb new_notebook_template.ipynb
+$ template create --new-template file4template.ipynb notebook_template.ipynb
 
 // Override template with new template.
-$ template create --new-template --override updated_markdown_template.md deprecated_markdown_template.md
+$ template create --new-template --override updated_file4template.md markdown_template.md
 ```
 
 ## Q&A
