@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "templates"
+version = "0.1.0"
+description = "CLI app to create files with templates."
+authors = ["smv7 <smv7.github@gmail.com>"]
+readme = "README.md"
+packages = [
+  {include = "available_templates"},
+]
+repository = "https://github.com/smv7/templates"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.3"
+
+[tool.poetry.scripts]
+template = "templates.cli:template"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

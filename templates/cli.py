@@ -11,7 +11,7 @@ from pathlib import Path
 import click
 
 
-TEMP_DIR_PATH = Path(__file__).parent / "available_templates"
+TEMP_DIR_PATH = Path(__file__).parents[1] / "available_templates"
 
 
 @click.group()
@@ -88,7 +88,10 @@ def list():
     if len(templates) > 0:
         click.echo("TEMPLATES:\n")
         for template in templates:
-            click.echo(f"\t- {template.name}")
+            # NOTE: Extra resources are required to be packaged as packages with Poetry in pyproject.toml's [packages].
+            if template.name != "__init__.py":
+                click.echo(f"\t- {template.name}")
+        click.echo('')
     else:
         click.echo("You've no templates yet.\n")
         click.echo("Use \"create\" subcommand to make some.")
