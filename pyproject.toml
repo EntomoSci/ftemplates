@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "templates"
-version = "0.1.0"
+version = "0.1.6"
 description = "CLI app to create files with templates."
 authors = ["smv7 <smv7.github@gmail.com>"]
 readme = "README.md"
 packages = [
-  {include = "available_templates"},
+  {include = "templates"},
 ]
 repository = "https://github.com/smv7/templates"
 
