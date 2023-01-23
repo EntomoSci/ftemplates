@@ -15,11 +15,11 @@ TEMP_DIR_PATH = Path(__file__).parent / "available_templates"
 
 
 @click.group()
-def template():
+def ftemp():
     click.echo('')
 
 
-@template.command()
+@ftemp.command()
 @click.option('--new-file', is_flag=True, default=True, help='(Default) Create new file using an existing template.')
 @click.option('--new-template', is_flag=True, default=None, help='Create a new template.')
 @click.option('--override', is_flag=True, default=None, help='Override file with same name created with template.')
@@ -79,7 +79,7 @@ def create(new_file, new_template, override, file_to_use, file_to_create):
     return None
 
 
-@template.command()
+@ftemp.command()
 def list():
     """Lists the existing templates."""
 

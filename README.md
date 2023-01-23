@@ -1,4 +1,4 @@
-# templates
+# ftemplates
 
 A CLI application to create files with templates.
 
@@ -18,35 +18,35 @@ automate the process with templates and a CLI.
 
 ## Installation
 
-1. Create a local copy of the repository:
+### Using pip
 ```console
-git clone git@github.com:smv7/templates.git
+$ pip install ftemplates
 ```
 
-2. Navigate to the package directory and install the package with `pip`:
+### Using poetry
 ```console
-pip install .
+$ poetry add ftemplates  // Adding as dependency to poetry's pyproject.toml.
 ```
 
 ## Usage
 
-In the terminal run `template` or `template --help` to know what to do. From there all its functionality should be easy
+In the terminal run `ftemp` or `ftemp --help` to know what to do. From there all its functionality should be easy
 to use.
 
 ## Examples
 
 ```console
 // List all available templates.
-$ template list  
+$ ftemp list  
 
 // Create new file using a template.
-$ template create --new-file python_template.py new_file.py
+$ ftemp create --new-file python_template.py new_file.py
 
 // Create new template using a file.
-$ template create --new-template file4template.ipynb notebook_template.ipynb
+$ ftemp create --new-template file4template.ipynb notebook_template.ipynb
 
 // Override template with new template.
-$ template create --new-template --override updated_file4template.md markdown_template.md
+$ ftemp create --new-template --override updated_file4template.md markdown_template.md
 ```
 
 ## Q&A
