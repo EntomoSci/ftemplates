@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ftemplates"
-version = "0.1.9"
+version = "0.1.10"
 description = "CLI app to create files with templates."
 authors = ["smv7 <smv7.github@gmail.com>"]
 readme = "README.md"
